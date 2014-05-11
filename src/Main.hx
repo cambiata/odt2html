@@ -16,17 +16,20 @@ class Main
 {
 	static function main() 
 	{		
+		//-------------------------------------------------------------------------------------------------------------------------
+		// read odt-file and create intermediate doc object...
+		
 		var odt = new Odt2Doc('test.odt');
-		
 		trace('saving content.xml from test.odt...');
-		FileTools.saveContent('content.xml', odt.getContentXml().toString());		
+		//FileTools.saveContent('content.xml', odt.getContentXml().toString());		
 		trace('saving style.xml from test.odt...');
-		FileTools.saveContent('style.xml', odt.getStyleXml().toString());		
-		
-		
+		//FileTools.saveContent('style.xml', odt.getStyleXml().toString());		
 		var doc = odt.getDocElements();
 		trace('saving intermediate doc format, for development overview...');
-		FileTools.saveContent('doc.xml', doc.toString());		
+		//FileTools.saveContent('doc.xml', doc.toString());		
+
+		//-------------------------------------------------------------------------------------------------------------------------
+		// create html from intermediate doc object...
 		
 		var doc2html = new Doc2Html(doc);
 		var html = doc2html.getHtml();

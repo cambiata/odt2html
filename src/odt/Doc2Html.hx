@@ -1,5 +1,6 @@
 package odt;
 import cx.HxdomTools;
+import cx.PngTools;
 import odt.Doc2Html.VDyn;
 
 import odt.Odt2Doc.IDocElements;
@@ -93,6 +94,30 @@ class Doc2Html
 			case DocTable: new ETable();
 			case DocTableRow: new ETableRow();
 			case DocTableCell:new ETableCell();
+			
+			case DocDrawFrame: 
+			{
+				var imgscale = 40;
+				var docel:DocDrawFrame = cast docel;
+				var width = Std.int(Std.parseFloat(StringTools.replace(docel.widthinfo, 'cm', '')) * imgscale);
+				var height = Std.int(Std.parseFloat(StringTools.replace(docel.heightinfo, 'cm', '')) * imgscale);
+				var imgstyle = 'width:${width}px; height:${height}px;';
+				var link = docel.link;
+				var el  = new EDiv();
+				var docimg:DocIDrawImage = cast docel.children[0];
+				if (docimg.bytes.length > 0)
+				{
+					var imgHtml = PngTools.pngBytesToHtmlImg(docimg.bytes, imgstyle);
+					el.addHtml(imgHtml);					
+				}
+				else
+				{
+					var imgTag = '<img src="$link" style="$imgstyle" />';
+					el.addHtml(imgTag);					
+				}
+				el;
+				
+			}
 			
 			default: new EDiv();
 		}		
