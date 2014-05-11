@@ -1,0 +1,92 @@
+<html>
+	<body>
+		<div>
+			<h1>Kontakta Körakademin Plus</h1>
+			<h1>Projektledare Lillemor Bodin Carlson</h1>
+			<p>
+				<span>E-post: </span>
+				<a href='mailto:lillemor.bodin.carlson.mellansel@folkbildning.net'
+				   target=''>
+					<span>lillemor.bodin.carlson.mellansel@folkbildning.net</span>
+				</a>
+			</p>
+			<p>
+				<span>Telefon: </span>
+				<b>0661-654412 </b>
+			</p>
+			<h1>Mellansels folkhögskola</h1>
+			<p>Tingshusgatan 8, 895 40 Mellansel </p>
+			<p>
+				<span>Telefon: </span>
+				<b>0661-654400</b>
+			</p>
+			<p>
+				<span>Fax: </span>
+				<b>0661-40903</b>
+			</p>
+			<p>
+				<div>
+					<div>
+					</div>
+				</div>
+			</p>
+			<p>
+				<b>Oordnad lista:</b>
+			</p>
+			<ul>
+				<li>
+					<p>Äpple</p>
+				</li>
+				<li>
+					<p>Banan</p>
+				</li>
+			</ul>
+			<p>
+				<i>Ordnad lista</i>
+			</p>
+			<ol>
+				<li>
+					<p>Första</p>
+				</li>
+				<li>
+					<p>Andra</p>
+				</li>
+			</ol>
+			<p>
+				<span>Tabell:</span>
+			</p>
+			<table>
+				<div>
+				</div>
+				<tr>
+					<td>
+						<p>
+							<span>Cell A1</span>
+						</p>
+					</td>
+					<td>
+						<p>
+							<span>Cell B1</span>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>
+							<span>Cell A2</span>
+						</p>
+					</td>
+					<td>
+						<p>
+							<span>Cell B2</span>
+						</p>
+					</td>
+				</tr>
+			</table>
+			<p>
+				<span>
+				</span>
+			</p>
+		</div>
+	</body>
+</html>
